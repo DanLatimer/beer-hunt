@@ -1,0 +1,48 @@
+.beer {
+  width: 33.333333333%;
+  height: 200dp
+}
+
+.beer-image {
+  width: 100%;
+  height: 200dp
+}
+
+.beer-label-container {
+  width: 100%;
+  margin-bottom: 25dp;
+}
+
+.beer-label {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #222f3e;
+  font-weight: bold;
+  font-size: 15dp;
+  padding: 7dp;
+}
+
+.beer-fab {
+  margin: 10dp;
+  background-color: #c8d6e5;
+  border-radius: 15%;
+  padding-left: 10dp;
+  padding-right: 10dp;
+  padding-top: 6dp;
+  padding-bottom: 6dp;
+
+  &.drunk {
+    background-color: #1dd1a1;
+  }
+}
+
+.odd {
+  .beer-label-container {
+    background-color: #8395a7;
+  }
+}
+
+.even {
+  .beer-label-container {
+    background-color: #576574;
+  }
+}

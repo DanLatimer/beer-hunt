@@ -1,0 +1,45 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/*.js": {"when": "$(basename).ts"},
+    "**/*.css": {"when": "$(basename).scss"},
+    "platforms": true
+  },
+  "search.followSymlinks": true,
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "**/dist": true,
+    "**/sourcemaps": true,
+    "**/builds": true,
+    "**/generator-templates": true,
+    "**/typings": true,
+    "platforms": true
+  },
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json",
+        "typescript"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautify"
+      ]
+    },
+    "css": [
+      "css",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html"
+    ]
+  },
+  "tslint.autoFixOnSave": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "npm-intellisense.importLinebreak": "\r\n"
+}

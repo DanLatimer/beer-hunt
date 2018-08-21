@@ -1,0 +1,51 @@
+<action-bar [includeMenu]="true" [includeBack]="false"></action-bar>
+
+<TabView selectedIndex='0' sdkExampleTitle sdkToggleNavButton>
+
+  <StackLayout *tabItem="{title: 'Styles'}">
+    <ScrollView>
+      <WrapLayout>
+        <GridLayout
+          class="beer"
+          *ngFor="let style of beerStyles; let isOdd=odd; let isEven=even"
+          [class.odd]="isOdd"
+          [class.even]="isEven">
+          <Image [src]="style.image" class="beer-image" stretch="aspectFill"></Image>
+          <StackLayout class="beer-label-container" verticalAlignment="bottom" width="100%">
+            <Label [text]="style.beerType" class="beer-label" horizontalAlignment="right" textWrap="true"></Label>
+          </StackLayout>
+          <GridLayout width="100%" cols="*" verticalAlignment="top">
+            <StackLayout class="" orientation="horizontal" horizontalAlignment="right">
+              <Label
+                [text]="style.isDrunk ? '  Drunk' : 'To Drink'"
+                class="beer-fab beer-label"
+                [ngClass]="style.isDrunk ? 'drunk' : ''"
+                horizontalAlignment="center"
+                textWrap="true"
+                (tap)="onStyleDrunkToggled(style)"></Label>
+
+            </StackLayout>
+          </GridLayout>
+        </GridLayout>
+      </WrapLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Beers'}">
+    <ScrollView>
+      <WrapLayout>
+        <GridLayout
+          class="beer"
+          *ngFor="let beer of beers; let isOdd=odd; let isEven=even"
+          [class.odd]="isOdd"
+          [class.even]="isEven">
+          <Image [src]="beer.image" class="beer-image" stretch="aspectFill"></Image>
+          <StackLayout class="beer-label-container" verticalAlignment="bottom" width="100%">
+            <Label [text]="beer.name" class="beer-label" horizontalAlignment="right" textWrap="true"></Label>
+          </StackLayout>
+        </GridLayout>
+      </WrapLayout>
+    </ScrollView>
+  </StackLayout>
+
+</TabView>

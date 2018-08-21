@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": false,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "noLib": false,
+        "lib": [
+            "es5",
+            "es6",
+            "dom",
+            "scripthost",
+            "es2015.collection",
+            "es2015.core",
+            "es2015.generator",
+            "es2015.iterable",
+            "es2015.promise",
+            "es2015.symbol",
+            "es2016.array.include",
+            "esnext.promise",
+        ],
+        "typeRoots": [
+          "node_modules",
+          "node_modules/@types"
+        ],
+        "types": [
+            "angular",
+            "lodash",
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "app/*"
+            ],
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*",
+                "./app/*"
+            ]
+        }
+    },
+    "files": [
+      "./app/vendor.ts",
+      "./app/main.ts",
+    ],
+    "include": [
+      "./app/**/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "platforms"
+    ],
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "useCache": false,
+    "isolatedModules": true
+}

@@ -1,0 +1,15 @@
+// Import app variables
+@import 'app-variables';
+
+@import '~nativscript-theme-core/css/core.dark.css';
+
+//* Theme create https://www.nativescriptthemebuilder.com/ */
+@import 'theme.scss';
+
+// Import common styles
+@import 'app-common';
+
+// Place any CSS rules you want to apply only on Android here
+.action-item {
+    padding-right: 10;
+}

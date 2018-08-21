@@ -1,0 +1,9 @@
+<ActionBar class="action-bar">
+    <ActionBar.title horizontalAlignment="left" class="action-bar-title">
+      <Label *ngIf="includeMenu" horizontalAlignment="left" text="&#xf0c9;" class="fa action-item-button" color="white" horizontalAlignment="left" (tap)="onShowSideDrawerTap()"></Label>
+      <Label *ngIf="includeBack" [text]="backButton" class="fa back-button" (tap)="onBackToPreviousPage()"></Label>
+      <!-- TODO: figure out why CSS margin is not applying even with !important, only inline style works for margin currently -->
+      <Image style="margin: 0dp" horizontalAlignment="center" src="res://beerhuntlogo" height="50dp" stretch="aspectFit" class="action-logo">
+      </Image>
+    </ActionBar.title>
+  </ActionBar>
